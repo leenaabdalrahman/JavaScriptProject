@@ -7,7 +7,6 @@ const display=async ()=>{
   function findById(id) {
     return info.find(item => item.id === id);
   }
-  // Example: Try to find the object with id 10 (which doesn't exist in the array)
   const IDinfo = findById(parseInt(id));
   console.log(IDinfo);
   const carouselInner = document.querySelector('#carouselExample .carousel-inner');
@@ -41,3 +40,6 @@ document.querySelector(".description").innerHTML=result;
 carouselInner.innerHTML = images;
 }
 display();
+document.querySelector('.nav-item').addEventListener('click', function(event) {
+  window.location.href = 'index.html'; // or '/'
+});
