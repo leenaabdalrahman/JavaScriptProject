@@ -10,9 +10,9 @@ const display=async ()=>{
   const IDinfo = findById(parseInt(id));
   console.log(IDinfo);
   const carouselInner = document.querySelector('#carouselExample .carousel-inner');
-  const images = IDinfo.pictures.map((ele)=>{
+  const images = IDinfo.pictures.map((ele, index)=>{
     return `
-          <div class="carousel-item active carousel-custom-height"
+          <div class="carousel-item ${index === 0 ? 'active' : ''} carousel-custom-height"
                   style="background-image: url('pictures/${ele}');">
               </div>
   `;

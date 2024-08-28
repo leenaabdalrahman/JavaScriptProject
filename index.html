@@ -1,89 +1,859 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Travel the world</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./main.css" >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
   </head>
-  <body style="background-color:  #858585;">
+  <body style="background-color: #cecece">
     <div class="overlay">
       <div class="loader"></div>
-  </div>
+    </div>
     <nav class="navbar navbar-expand-lg fixed-top p-0">
       <div class="container p-0">
         <a class="navbar-brand p-0" href="https://eqlaa.net">
-          <img src="navbar img/detailed-travel-logo (1).png" alt="logo" >
+          <img src="navbar img/detailed-travel-logo (1).png" alt="logo" />
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 color">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <!-- Button to trigger the About Us modal -->
+              <button
+                class="btn"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+              >
+                About Us
+              </button>
+
+              <!-- Full-Screen Modal for About Us -->
+              <div
+                class="modal fade"
+                id="myModal"
+                tabindex="-1"
+                aria-labelledby="myModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="myModalLabel">Who are we?</h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div
+                        class="titlemodal active d-flex justify-content-center align-items-center"
+                        style="
+                          background-image: url('pictures/n7n.png');
+                          height: 200px;
+                          background-position: center;
+                          background-size: cover;
+                        "
+                      ></div>
+                      <div class="text-center my-4">
+                        <h2 class="modal-text">
+                          Iqlaa Travel and Tourism Company
+                        </h2>
+                      </div>
+                      <div class="mb-4">
+                        <p class="modal-text">
+                          Specializing in covering tourism programs around the
+                          world, it began its activity in the city of Riyadh in
+                          the Kingdom of Saudi Arabia. We continuously strive to
+                          serve customers throughout the entire Gulf, to cover
+                          customers’ desires with a distinct, safe, and
+                          different travel experience.
+                        </p>
+                        <p class="modal-text">
+                          Book with us and say done and don't worry.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item text-black" href="#">Action</a></li>
-                <li><a class="dropdown-item text-black" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item text-black" href="#">Something else here</a></li>
-              </ul>
+              <div class="dropdown">
+                <button
+                  class="btn"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Settings
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li>
+                    <button
+                      class="dropdown-item text-black"
+                      id="darkModeToggle"
+                    >
+                      Dark Mode
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item text-black"
+                      id="lightModeToggle"
+                    >
+                      Light Mode
+                    </button>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <button
+                      class="dropdown-item text-black"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#subscriptionModal"
+                    >
+                      Subscription
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Subscription Modal -->
+              <div
+                class="modal fade"
+                id="subscriptionModal"
+                tabindex="-1"
+                aria-labelledby="subscriptionModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="subscriptionModalLabel">
+                        Subscription Form
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="username" class="form-label"
+                            >Username</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="username"
+                            placeholder="Enter your username"
+                            required
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label"
+                            >Email address</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="email" class="form-label"
+                            >Confirm Email address</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label"
+                            >Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label"
+                            >Confirm Password</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                          Subscribe
+                        </button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <header>
-      <div id="carouselExample" class="carousel slide vh-100"data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-inner h-100 text-white">
-
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <div
+        id="carouselExample"
+        class="carousel slide vh-100"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        <div class="carousel-inner h-100 text-white"></div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
     </header>
-    <section class="login">
-      <div class="container vh-100">
-        <div class="row h-100 ">
-          <div class="col-6 subscriptionPhoto h-100">
-            <img src="images/full-shot-travel-concept-with-landmarks-1340x894.jpg" class="img-fluid h-100 w-100" style="object-fit: cover;" />
+    <section class="login" id="login">
+      <div class="container">
+        <div class="row">
+          <div class="subscriptionPhoto">
+            <img
+              src="images/full-shot-travel-concept-with-landmarks-1340x894.jpg"
+              class="img-fluid rounded-circle"
+              alt="Travel Landmarks"
+            />
           </div>
-          <div class="col-6 subscription h-100 d-flex align-items-center d-flex flex-column justify-content-center ">
+          <div
+            class="col-12 col-lg-6 d-flex align-items-center flex-column justify-content-center text-center"
+          >
             <h2>Distinctive travel experiences and exceptional adventures</h2>
-            <p> Embark with us on a journey of discovery that includes the beauty of the world and the splendor of tourist experiences, and participate in our inspiring trips that take you to places you never thought possible. Subscribe to the mailing list to receive the latest articles.</p>
-            <button type="button" class="btn btn-danger">Danger</button>
+            <p>
+              Embark with us on a journey of discovery that includes the beauty
+              of the world and the splendor of tourist experiences. Participate
+              in our inspiring trips that take you to places you never thought
+              possible. Subscribe to our mailing list to receive the latest
+              articles.
+            </p>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Log In
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      log in
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="name@example.com"
+                      />
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="floatingPassword"
+                        placeholder="Password"
+                      />
+                      <label for="floatingPassword">Password</label>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="information">
-      <div class="container d-flex mt-2 flex-wrap">
+    <section class="information" id="information">
+      <div class="container"></div>
 
-      </div>
       <div class="pagination-container">
-        <ul class="pagination">
+        <ul class="pagination"></ul>
+      </div>
+    </section>
+    <section class="services" id="services">
+      <div class="container">
+        <div class="row">
+          <div
+            class="ourservice col-12 col-lg-6 d-flex align-items-center flex-column justify-content-center text-center"
+          >
+            <h2 class="mb-5">Our tourism services</h2>
+            <!-- Add margin-bottom to create space below h2 -->
+            <p class="mb-4">
+              We are a tourism company specialized in providing unforgettable
+              travel experiences around the world. We provide comprehensive
+              tourism services and our specialized team works to plan trips
+              according to our clients’ requirements and provide travel
+              experiences tailored to their needs and desires.
+            </p>
+            <!-- Add margin-bottom to create space below p -->
+            <div class="service_title">
+              <img src="pictures/shape-map 1.png" alt="Experience Map" />
+              <h3>10 years of experience</h3>
+            </div>
+          </div>
 
-        </ul>
-    </div>
+          <div class="services_card justify-content-center"></div>
+        </div>
+      </div>
     </section>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      <script type="module" src="main.js" ></script>
-    </body>
+    <section class="comments" id="comments">
+      <div class="container d-flex mt-2 flex-wrap"></div>
+      <div class="pagination-container">
+        <ul class="pagination"></ul>
+      </div>
+    </section>
+    <section class="numbers py-4" id="in_general">
+      <div class="contain">
+        <ul class="row numbers-list">
+          <li class="col-md-3 col-sm-6 number-item mb-4">
+            <img
+              src="./pictures/icons8-around-the-globe-80.png"
+              alt="icon"
+              class="number-icon img-fluid"
+            />
+            <h2 class="number-title mt-2">+ 10</h2>
+            <p class="number-description">الخدمات السياحية المقدمة من حجز طيران وفنادق وبرامج واستخراج تأشيرات</p>
+          </li>
+          <li class="col-md-3 col-sm-6 number-item mb-4">
+            <img
+              src="/pictures/icons8-google-80.png"
+              alt="icon"
+              class="number-icon img-fluid"
+            />
+            <h2 class="number-title mt-2">4.6</h2>
+            <p class="number-description">تقييمنا على جوجل</p>
+          </li>
+          <li class="col-md-3 col-sm-6 number-item mb-4">
+            <img
+              src="/pictures/icons8-map-pinpoint-80.png"
+              alt="icon"
+              class="number-icon img-fluid"
+            />
+            <h2 class="number-title mt-2">+ 50</h2>
+            <p class="number-description">عدد وجهاتنا حول العالم</p>
+          </li>
+          <li class="col-md-3 col-sm-6 number-item mb-4">
+            <img
+              src="pictures/icons8-people-80.png"
+              alt="icon"
+              class="number-icon img-fluid"
+            />
+            <h2 class="number-title mt-2">+ 3000</h2>
+            <p class="number-description">عملاء تمت خدمتهم</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="title text-center">
+          <h2 class="text-uppercase fw-bold text-main">Contact</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Dignissimos at exercitationem veritatis, excepturi, illo accusantium
+            eius eos quisquam autem veniam voluptatem iste quas ex provident?
+            Odit est repellendus doloribus sapiente!
+          </p>
+        </div>
+        <div class="contact-info">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="address d-flex gap-2 align-items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  width="18"
+                  viewBox="0 0 384 512"
+                >
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    fill="#fe8709"
+                    d="M384 192c0 87.4-117 243-168.3 307.2c-12.3 15.3-35.1 15.3-47.4 0C117 435 0 279.4 0 192C0 86 86 0 192 0S384 86 384 192z"
+                  />
+                </svg>
+                <div class="addres_info">
+                  <h4>Location:</h4>
+                  <address>Ramallah</address>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="address d-flex gap-2 align-items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20"
+                  width="20"
+                  viewBox="0 0 512 512"
+                >
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    fill="#fe8709"
+                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                  />
+                </svg>
+                <div class="addres_info">
+                  <h4>Email:</h4>
+                  <address>leenasa27@gmail.com</address>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="address d-flex gap-2 align-items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20"
+                  width="20"
+                  viewBox="0 0 512 512"
+                >
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    fill="#fe8709"
+                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+                  />
+                </svg>
+                <div class="addres_info">
+                  <h4>Phone:</h4>
+                  <address>0595846225</address>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form>
+            <div class="mb-3">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Phone"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <span class="input-group-text" id="basic-addon2">
+                  <select
+                    class="form-select form-select-lg mb-3"
+                    aria-label="Large select example"
+                  >
+                    <option selected>International number :</option>
+                    <option value="1">+972</option>
+                    <option value="2">+970</option>
+                    <option value="3">+962</option>
+                    <option value="3">+966</option>
+                  </select></span
+                >
+              </div>
+              <div class="choose d-flex">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your current location"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder=" Your destination"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+              </div>
+              <div class="button">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Book now
+                </button>
+              </div>
+              <!-- Button trigger modal -->
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Modal title
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">
+                Leave a comment here :</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+
+              <div
+                class="sentbtn d-flex align-items-center justify-content-center gap-3"
+              >
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal1"
+                >
+                  Send
+                </button>
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal1"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                          send
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">Sent successfully !</div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2"
+                >
+                  Call Now
+                </button>
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal2"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel2">
+                          Call us
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body d-flex row">
+                        <a href="https://web.whatsapp.com/"
+                          >Whatsapp : +972 59 584 6225</a
+                        >
+                        <a href="#">phone number : +972 59 584 6225</a>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-start">
+            <div class="logo">
+              <img src="navbar img/detailed-travel-logo (1).png" />
+              <a href="#">World Travel</a>
+            </div>
+            <p>
+              We specialize in covering tourism programs around the world. Our headquarters are in the city of Riyadh in the Kingdom of Saudi Arabia
+            </p>
+            <div class="icons">
+              <a href="https://www.facebook.com/"
+                ><img src="icons/facebook logo.svg"
+              /></a>
+              <a href="https://www.instagram.com/"
+                ><img src="icons/instagram logo.svg"
+              /></a>
+              <a href="https://x.com/?mx=2"
+                ><img src="icons/Twitter logo.svg"
+              /></a>
+              <a href="https://www.linkedin.com/"
+                ><img src="icons/linkedin logo.svg"
+              /></a>
+            </div>
+          </div>
+          <div class="footer-end">
+            <div class="row">
+              <div class="footer-item">
+                <h2>Home</h2>
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="index.html#login">Login</a>
+                    </li>
+                    <li>
+                      <a href="index.html#information">Information</a>
+                    </li>
+                    <li>
+                      <a href="index.html#services">Services</a>
+                    </li>
+                    <li>
+                      <a href="index.html#comments">comments</a>
+                    </li>
+                    <li>
+                      <a href="index.html#in_general">In general</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer-item">
+                <h2>Information</h2>
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="details.html?id=1">Bosnia and Herzegovina</a>
+                    </li>
+                    <li>
+                      <a href="details.html?id=2">Turkey</a>
+                    </li>
+                    <li>
+                      <a href="details.html?id=3">Azerbaijan</a>
+                    </li>
+                    <li>
+                      <a href="details.html?id=4">Thailand</a>
+                    </li>
+                    <li>
+                      <a href="details.html?id=5">maldives</a>
+                    </li>
+                    <li>
+                      <a href="details.html?id=6">South Africa</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer-item">
+                <h2>Services</h2>
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="service.html?id=1"
+                        >Application for tourist visas</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service.html?id=2">Flight reservation</a>
+                    </li>
+                    <li>
+                      <a href="service.html?id=3"
+                        >International driving license</a
+                      >
+                    </li>
+                    <li>
+                      <a href="service.html?id=4"
+                        >Tourism study abroad programs</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer-item">
+                <h2>Contact</h2>
+                <a href="index.html#Contact"
+                  >leenasa272@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>

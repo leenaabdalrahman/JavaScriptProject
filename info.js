@@ -34,7 +34,7 @@ export const info = [
   {
     "id": 2,
     "title": "Turkey",
-    "price": 899.41,
+    "price": 979.41,
     "description": " Travel and enjoy with us a vacation surrounded by nature and civilization in Türkiye7 days (6 nights)between the civilization and culture of Istanbul and stunning nature Price is per person in a double roomr",
     "image": "T4.jpeg",
     "titleImg": "titleTurkey.jpg",
@@ -64,7 +64,7 @@ export const info = [
   },{
     "id": 3,
     "title": "Azerbaijan",
-    "price": 899.41,
+    "price": 1000,
     "description": "We tried to spend a vacation in the lap of nature in beautiful Azerbaijan for 6 days and 5 nights between the capital Baku and nature in Gabala",
     "image": "Azerbaijan.JPG",
     "titleImg": "titleAzerbaijan.jpg",
@@ -92,80 +92,67 @@ export const info = [
 ,
 "AZ3.jpg"
 ,
-"AZ4.jpg"
+"AZ4.jpeg"
 ],
   },
   {
     "id": 4,
-    "title": "Bosnia and Herzegovina",
-    "price": 899.41,
+    "title": " Thailand",
+    "price": 1020.41,
     "description": "Travel and enjoy with us a vacation surrounded by nature in Bosnia and Herzegovina 8 days (7 nights) between the capital, Sarajevo, and the picturesque nature of Mostar",
-    "image": "Bosnia and Herzegovina.jpeg",
-    "titleImg": "titleBosnia.jpg",
+    "image": "تايلاند.png",
+    "titleImg": "تايلاند.png",
     "offers": [
-        "Reception and farewell at the airport"
-,
-"Hotel accommodation with breakfast"
-,
-"Private car with driver"
-,
-"Movement between cities"
-,
-"Sightseeing tours"
-,
-"SIM cards and internet"
-,
-"Customer service in Arabic in Bosnia"
-      ],
+  "Reception and farewell at the airport",
+  "Hotel accommodation in 4-star hotels",
+  "Breakfast in hotels throughout the stay",
+  "Moving between cities",
+  "Domestic flight",
+  "Car with private driver",
+  "Sightseeing tours",
+  "Customer service in Arabic"
+],
       "pictures": [
-        "bosnia1.jpg"
+        "TH1.jpg"
 ,
-"bosnia2.jpeg"
+"TH2.jpeg"
 ,
-"bosnia3.jpg"
+"TH3.jpg"
 ,
-"bosnia4.jpg"
+"TH4.jpg"
 ],
   },
   {
     "id": 5,
-    "title": "Bosnia and Herzegovina",
-    "price": 899.41,
+    "title": "maldives",
+    "price": 980.41,
     "description": "Travel and enjoy with us a vacation surrounded by nature in Bosnia and Herzegovina 8 days (7 nights) between the capital, Sarajevo, and the picturesque nature of Mostar",
-    "image": "Bosnia and Herzegovina.jpeg",
-    "titleImg": "titleBosnia.jpg",
+    "image": "maldives.png",
+    "titleImg": "maldives.png",
     "offers": [
-        "Reception and farewell at the airport"
-,
-"Hotel accommodation with breakfast"
-,
-"Private car with driver"
-,
-"Movement between cities"
-,
-"Sightseeing tours"
-,
-"SIM cards and internet"
-,
-"Customer service in Arabic in Bosnia"
-      ],
+  "4-star water villa",
+  "Accommodation in a seaside villa with a pool or a beach villa with a pool",
+  "Half board accommodation (includes two basic meals only)",
+  "Reception and farewell at the airport by the resort representative",
+  "Transfers to and from the airport by seaplane"
+],
       "pictures": [
-        "bosnia1.jpg"
+        "mal1.jpg"
 ,
-"bosnia2.jpeg"
+"mal2.jpeg"
 ,
-"bosnia3.jpg"
+"mal3.jpeg"
 ,
-"bosnia4.jpg"
+"mal4.JPG"
 ],
   },
   {
     "id": 6,
-    "title": "Bosnia and Herzegovina",
-    "price": 899.41,
+    "title": " South Africa",
+    "price": 1000.41,
     "description": "Travel and enjoy with us a vacation surrounded by nature in Bosnia and Herzegovina 8 days (7 nights) between the capital, Sarajevo, and the picturesque nature of Mostar",
-    "image": "Bosnia and Herzegovina.jpeg",
-    "titleImg": "titleBosnia.jpg",
+    "image": "africa.jpg",
+    "titleImg": "africa.jpg",
     "offers": [
         "Reception and farewell at the airport"
 ,
@@ -182,13 +169,13 @@ export const info = [
 "Customer service in Arabic in Bosnia"
       ],
       "pictures": [
-        "bosnia1.jpg"
+        "af1.jpeg"
 ,
-"bosnia2.jpeg"
+"af2.jpeg"
 ,
-"bosnia3.jpg"
+"af3.jpg"
 ,
-"bosnia4.jpg"
+"af4.jpg"
 ],
   },
 ]
